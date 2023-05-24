@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="form-body">
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h1>Algoritmo de Clustering Scalable</h1>
+                    <br>
+                    <p>Algoritmo de partición de datos</p>
+                    <br>
+                    <form class="requires-validation" novalidate action="{{ url_for('implementation') }}" method="POST">
+
+                        <div class="col-md-12">
+                            <span>Data</span>
+                            <select class="form-select mt-3" name="data" required>
+                                <option selected disabled value="">Seleccionar</option>
+                                <option type="text" value="1">Datos sintéticos</option>
+                                <option type="text" value="2">Iris</option>
+                            </select>
+                        </div>
+                        <br>
+
+                        <div class="col-md-12">
+                            <label for="k">Número de clusters</label>
+                            <input class="form-control" type="text" name="k" placeholder="Entero" required>
+                        </div>
+                        <br>
+
+                        <div class="col-md-12">
+                            <label for="l">Factor de sobremuestreo</label>
+                            <input class="form-control" type="text" name="l" placeholder="Entero" required>
+                        </div>
+                        <br>
+
+                        <div class="col-md-12">
+                            <label for="n">Cantidad de datos</label>
+                            <input class="form-control" id="n" type="text" name="n" placeholder="Numero de datos"
+                                required>
+                        </div>
+                        <br>
+
+                        <div class="col-md-12">
+                            <label for="d">Dimensión</label>
+                            <input class="form-control" type="text" name="d" placeholder="Entero" required>
+                        </div>
+                        <br>
+                        <div class="form-button mt-3">
+                            <input class="miboton" type="submit" value="Calcular" name="Calcular" onclick="{{ url_for('results') }}">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
