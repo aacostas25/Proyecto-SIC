@@ -1,69 +1,50 @@
 {% extends 'layout.html' %}
-{%block content%}
-<div class="w3-content" style="max-width:1532px;">
-    <div class="w3-row-padding" id="about">
-        <div class="w3-col l4 12">
-          <h3>Información</h3>
-          <h6>Aqui habra info sobre metricas y las fotos.</h6>
-        <p>We accept: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> 
-          <i class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i>
-          <i class="fa fa-cc-paypal w3-large"></i></p>
-        </div>
-        <div class="w3-col l8 12">
-          <!-- Image of location/map -->
-          <img src="/imagenes/red.png" class="w3-image w3-greyscale" style="width:100%;">
-        </div>
-      </div>
+{% block content %}
+<div class="w3-content" style="max-width: 1532px;">
+  <div class="w3-row-padding" id="about">
+    <div class="w3-col l4 s12">
+      <h3>Proyecto Sistemas Inteligentes Computacionales</h3>
+      <h6>Aquí habrá información sobre métricas y las fotos.</h6>
+      <p>We accept: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> 
+        <i class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i>
+        <i class="fa fa-cc-paypal w3-large"></i></p>
+    </div>
+    <div class="w3-col l8 s12">
+      <!-- Image of location/map -->
+      <img src="/imagenes/red.png" class="w3-image w3-greyscale" style="width: 100%;">
+    </div>
+  </div>
 
-<div class="w3-container">
+  <div class="w3-container">
     <h3>Nuestras bases de datos</h3>
     <h6>Podrá usted practicar con las siguientes bases:</h6>
   </div>
-  
-  <div class="w3-row-padding w3-padding-16 w3-text-white w3-large">
-    <div class="w3-half w3-margin-bottom">
+
+  <div class="w3-row-padding">
+    <div class="w3-third w3-margin-bottom">
       <div class="w3-display-container">
-        <img src="/Users/andreacamilaacosta/ShellFront/imagenes/red.png" alt="Cinque Terre" style="width:100%">
+        <img src="{{ url_for('static', filename='images/IMG_9375.JPG') }}" alt="Titanic" style="width: 100%; height: 535px;">
         <span class="w3-display-bottomleft w3-padding">Iris</span>
       </div>
     </div>
-    <div class="w3-half">
-      <div class="w3-row-padding" style="margin:0 -16px">
-        <div class="w3-half w3-margin-bottom">
-          <div class="w3-display-container">
-            <img src="/Users/andreacamilaacosta/ShellFront/imagenes/red.png" alt="New York" style="width:100%">
-            <span class="w3-display-bottomleft w3-padding">Diabetes</span>
-          </div>
-        </div>
-        <div class="w3-half w3-margin-bottom">
-          <div class="w3-display-container">
-            <img src="/Users/andreacamilaacosta/ShellFront/imagenes/red.png" alt="San Francisco" style="width:100%">
-            <span class="w3-display-bottomleft w3-padding">San Francisco</span>
-          </div>
-        </div>
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-display-container">
+        <img src="{{ url_for('static', filename='images/IMG_9390.JPG') }}" alt="Titanic" style="width: 100%;">
+        <span class="w3-display-bottomleft w3-padding">Titanic</span>
       </div>
-      <div class="w3-row-padding" style="margin:0 -16px">
-        <div class="w3-half w3-margin-bottom">
-          <div class="w3-display-container">
-            <img src="/Users/andreacamilaacosta/ShellFront/imagenes/red.png" alt="Pisa" style="width:100%">
-            <span class="w3-display-bottomleft w3-padding">Pisa</span>
-          </div>
-        </div>
-        <div class="w3-half w3-margin-bottom">
-          <div class="w3-display-container">
-            <img src="/Users/andreacamilaacosta/ShellFront/imagenes/red.png" alt="Paris" style="width:100%">
-            <span class="w3-display-bottomleft w3-padding">Paris</span>
-          </div>
-        </div>
+    </div>
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-display-container">
+        <img src="{{ url_for('static', filename='images/IMG9898.jpg') }}" alt="Titanic" style="width: 100%; height: 535px;">
+        <span class="w3-display-bottomleft w3-padding">Snails</span>
       </div>
     </div>
   </div>
 
-  <div class="w3-row-padding w3-large w3-center" style="margin:32px 0">
+  <div class="w3-row-padding w3-large w3-center" style="margin: 32px 0;">
     <div class="w3-third"><i class="fa fa-map-marker w3-text-red"></i> Universidad Nacional de Colombia</div>
     <div class="w3-third"><i class="fa fa-phone w3-text-red"></i> Phone: +57 318402082</div>
     <div class="w3-third"><i class="fa fa-envelope w3-text-red"></i> fmarina@unal.edu.co </div>
   </div>
-
 </div>
-{%endblock%}
+{% endblock %}

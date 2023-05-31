@@ -13,18 +13,7 @@
                     <br>
                     <form class="requires-validation" novalidate action="{{ url_for('implementation') }}" method="POST">
 
-                        <div class="col-md-12">
-                            <span>Data</span>
-                            <select class="form-select mt-3" name="data" required>
-                                <option selected disabled value="">Seleccionar</option>
-                                <option type="text" value="1">Titanic</option>
-                                <option type="text" value="2">Iris</option>
-                                <option type="text" value="3">Snail</option>
-                                <option type = "text" value="4">Sinteticos</option>
-                            </select>
-                        </div>
-                        <br>
-
+                        
                         <div class="col-md-12">
                             <label for="iteraciones">Iteraciones</label>
                             <input class="form-control" type="text" name="iteraciones" placeholder="Entero" required>

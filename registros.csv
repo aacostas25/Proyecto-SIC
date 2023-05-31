@@ -1,5 +1,7 @@
--10.0,1,2,2,20,2,Calcular
--10.0,1,2,2,20,2,Calcular
--10.0,1,2,2,20,2,Calcular
--10.0,1,2,20,2,2,Calcular
--10.0,2,2,2,20,2,Calcular
+Data,Iteraciones,Eta,Funcion,Neuronas1,Neuronas2,Loss
+2,12,1,1,4,3,"Species    0.658333
+dtype: float64"
+2,12,1,2,5,2,"Species    1.991667
+dtype: float64"
+2,12,1,1,2,5,0.6583333333333459
+2,12,0.1,1,2,5,0.3280001439609672

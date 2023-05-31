@@ -1,19 +1,9 @@
 {% extends "layout.html" %}
-<style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-    th, td {
-      border: 1px solid black;
-      padding: 8px;
-      text-align: left;
-    }
-    th {
-      background-color: #f2f2f2;
-    }
-  </style>
-<h1>Tabla de Valores y funcion de perdida</h1>
 {%block content%}
-{{tabla|safe}}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<div class="container">
+  <table class="table table-striped">
+    {{ tabla | safe }}
+  </table>
+</div>
 {%endblock%}
