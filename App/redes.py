@@ -8,8 +8,8 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
-#from sklearn.preprocessing import MinMaxScaler
-#from sklearn.datasets import make_blobs
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.datasets import make_blobs
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 import io
 
@@ -63,6 +63,22 @@ def seleccionarFA(numero):
 """
 Ahora definimos quien va a ser tanto el X,Y
 """
+
+def blob(muestras,centros,std):
+    X,y = make_blobs(
+        n_samples    = muestras, 
+        n_features   = 2, 
+        centers      = centros, 
+        cluster_std  = std, 
+        shuffle      = True, 
+        random_state = 0
+       )
+    scaler = MinMaxScaler()
+    y = np.reshape(y, (-1, 1))
+    y_normalized = scaler.fit_transform(y)
+    x_inicial = 2
+    X_train, X_test, Y_train, Y_test = train_test_split(X,y_normalized , test_size=0.2, random_state=42)
+    return x_inicial,X,y,X_train,Y_train
 
 #Red neuronal con arquitectura x-10-7-1
 

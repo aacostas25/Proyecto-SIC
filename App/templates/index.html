@@ -2,16 +2,18 @@
 {% block content %}
 <div class="w3-content" style="max-width: 1532px;">
   <div class="w3-row-padding" id="about">
-    <div class="w3-col l4 s12">
+    <div class="w3-col l6 s12">
       <h3>Proyecto Sistemas Inteligentes Computacionales</h3>
-      <h6>Aquí habrá información sobre métricas y las fotos.</h6>
-      <p>We accept: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> 
-        <i class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i>
-        <i class="fa fa-cc-paypal w3-large"></i></p>
+      <h6>El proyecto fue creado con el fin de suministrar una herramienta en la cual se pueda 
+        visualizar la implementación de Sistemas inteligentes, mas precisamente Redes Neuronales 
+          en al menos 2 casos diferentes.
+            La implementación del proyecto consta de 3 bases de datos conocidas y una zona de 
+            playground donde el usuario puede crear datos sintéticos para hacer mas directa la interacción 
+            entre los datos de entrada y el aprendizaje de la Red Neuronal.</h6>
     </div>
-    <div class="w3-col l8 s12">
+    <div class="w3-col l6 s12">
       <!-- Image of location/map -->
-      <img src="/imagenes/red.png" class="w3-image w3-greyscale" style="width: 100%;">
+      <img src="{{ url_for('static', filename='images/inteligencia.jpg') }}" class="w3-image w3-greyscale" style="width: 100%;">
     </div>
   </div>
 

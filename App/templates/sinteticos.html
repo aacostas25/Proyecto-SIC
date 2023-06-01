@@ -7,13 +7,29 @@
         <div class="form-holder">
             <div class="form-content">
                 <div class="form-items">
-                    <h1>Hiperparametros - MLP</h1>
+                    <h1>Datos Sinteticos</h1>
                     <br>
-                    <p>Hiperparametros en una red neuronal multicapa.</p>
+                    <p>Datos sinteticos en donde debes asignar la cantidad de datos, es decir, las muestras. Donde debes
+                        darle la desviación estandar y la cantidad de centros. 
+                    </p>
                     <br>
-                    <form class="requires-validation" novalidate action="{{ url_for('implementation') }}" method="POST">
+                    <form class="requires-validation" novalidate action="{{ url_for('resultados_sinteticos') }}" method="POST">
+                        <div class="col-md-12">
+                            <label for="muestras">Muestras</label>
+                            <input class="form-control" type="text" name="muestras" placeholder="Entero" required>
+                        </div>
+                        <br>
 
-                        
+                        <div class="col-md-12">
+                            <label for="std">Desviación Estandar</label>
+                            <input class="form-control" type="text" name="std" placeholder="Entero" required>
+                        </div>
+                        <br>
+                        <div class="col-md-12">
+                            <label for="centros">Centros</label>
+                            <input class="form-control" type="text" name="centros" placeholder="Entero" required>
+                        </div>
+                        <br>
                         <div class="col-md-12">
                             <label for="iteraciones">Iteraciones</label>
                             <input class="form-control" type="text" name="iteraciones" placeholder="Entero" required>
@@ -47,7 +63,7 @@
                         </div>
                         <br>
                         <div class="form-button mt-3">
-                            <input class="miboton" type="submit" value="Calcular" name="Calcular" onclick="{{url_for('results')}}">
+                            <input class="miboton" type="submit" value="Calcular" name="Calcular" onclick="toggleImage()">
                         </div>
                     </form>
                 </div>
@@ -55,6 +71,12 @@
         </div>
     </div>
 </div>
-
-
+<div style="display: flex;">
+    <div>
+      <img src="{{ url_for('static', filename='images/bloc.png') }}" alt="Imagen 1" >
+    </div>
+    <div>
+      <img src="{{ url_for('static', filename='images/bloc2.png') }}" alt="Imagen 2">
+    </div>
+</div>
 {% endblock %}
